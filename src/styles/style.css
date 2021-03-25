@@ -1,0 +1,170 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap');
+@import "mobile.css";
+
+@media (min-width: 960px)
+{
+    /*** 
+    *** NAVIGATION 
+    ***/ 
+
+    .logo {
+        color: var(--secondary-color);
+        display: inline-block;
+        padding: .4rem 1rem 0 1rem;
+        font-weight: bold;
+    }
+
+    i.fa-bars {
+        display: none;
+    }
+
+    nav {
+        float: right;
+    }
+
+    nav > ul.nav-links {
+        display: flex;
+    }
+
+    nav > ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+
+    li + li {
+        margin-left: 1rem;
+    }
+
+    nav a {
+        color: var(--secondary-color);
+        opacity: .4;
+        padding: 0 1rem .5rem 1rem;
+        border-bottom: .25rem solid transparent;
+        font-weight: bold;
+        display: block;
+    }
+
+    .active {
+        color: var(--secondary-color);
+        border-bottom-color: var(--secondary-color);
+    }
+    
+
+/*** 
+*** HOME 
+***/ 
+
+    .welcome {
+        margin-right: 26rem;
+    }
+
+    #home {
+        background-color: var(--secondary-color);
+    }
+
+    #home::before {
+        position: absolute;
+        content: "";
+        border-radius: 50%;
+        width: 100vw;
+        height: 100vw; 
+        background-color: var(--primary-color);
+        top: -25vw;
+        left: -40vw;
+        animation-name: home-circle;
+        animation-duration: 2s;
+    }
+
+    @keyframes home-circle {
+        from { left: -100vw }
+        60% { left: -25vw }
+        to { left: -40vw }
+    }
+
+    .social {
+        margin-bottom: 10rem;
+    }
+
+    .development-image {
+        position: absolute;
+        width: calc(100% - 2rem);
+        width: 100%;
+        margin-left: 12rem;
+    }
+
+    /*** 
+    *** ABOUT 
+    ***/ 
+
+    .about-me div {
+        display: flex;
+    }
+    
+    .about-grid {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+
+    img.undraw-girl {
+        position: relative;
+        height: 20rem;
+        top: -2rem;
+        display: block;
+    }
+
+    .about-me p {
+        margin-left: 3rem;
+    }
+
+    /*** 
+    *** CONTACT 
+    ***/ 
+
+    .contact-info > div {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .contact-info .contact-data {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-info .contact-data i {
+        margin-right: .5rem;
+        color: var(--gray);
+    }
+    
+
+    /*** 
+    *** FOOTER 
+    ***/ 
+
+    footer > div.container {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+    }
+
+    footer > div.container {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+    }
+
+    .development-image {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: calc(50% - 32rem);
+        height: 90%;
+        left: 0;
+    }
+
+}
+
